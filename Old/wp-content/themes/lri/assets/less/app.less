@@ -1,0 +1,555 @@
+/*!
+ * Roots 6.5.2
+ */
+
+@import "bootstrap/bootstrap.less";
+
+@import "style-variables.less";
+/* ==========================================================================
+   Base
+   ========================================================================== */
+
+body {
+  background-color: @website-background;
+}
+
+/* ==========================================================================
+   Header
+   ========================================================================== */
+.header {
+  background-color: #fff;
+}
+.banner {
+  background: url('../img/header_bg.png') repeat-x;
+  height: @header-height;
+  .search-form {
+    .form-control {
+      height: 26px;
+      border-radius: 0;
+      border: 0;
+      background-color: #e8e8e8;
+      color: #222;
+    }
+    .input-group-btn {
+      .btn {
+        padding: 3px;
+        border: 0;
+        border-radius: 0;
+        height: 26px;
+        width: 18px;
+      }
+      .btn-default {
+        background: url('../img/go.png') no-repeat #e8e8e8;
+        background-position: 25%;
+      }
+    }
+  }
+
+}
+
+.brand img {
+  padding: @logo-padding;
+}
+
+ul.nav li.dropdown:hover ul.dropdown-menu{
+  display: block;
+}
+
+.nav-menu {
+  > li {
+    float: left;
+    text-align: left;
+    margin: @nav-menu-li-margin;
+    display: inline-block;
+    font-size: @nav-menu-link-font-size;
+    font-weight: bold;
+    &.nav-menu-text {
+      padding: @nav-menu-link-padding;
+      font-weight: normal;
+    }
+    > a {
+      color: @nav-menu-link-color;
+      padding: @nav-menu-link-padding;
+      &:hover,
+      &:focus {
+        color: @nav-menu-link-color-hover;
+        background-color: transparent;
+      }
+    }
+    // Active state
+    &.active > a {
+      &,
+      &:hover,
+      &:focus {
+        color: @nav-menu-link-color-hover;
+        background-color: none;
+        display: inline-block;
+      }
+    }
+  }
+}
+
+/* ==========================================================================
+   Content
+   ========================================================================== */
+.page-top {
+  background: url('../img/transparent_fade.png') no-repeat;
+  height: 204px;
+  .page-headline {
+    font-size: 1.2em;
+    font-style: italic;
+    font-weight: bold;
+    padding: 60px 20px 0 150px;
+    > h2 {
+      font-size: 28px;
+      padding: 5px;
+      margin: 0;
+      font-weight: bolder;
+    }
+    &-small-text {
+      font-size: 14px;
+      font-weight: normal;
+    }
+  }
+}
+
+
+
+.content {
+  background-color: @content-background-color;
+  .border-bottom {
+    border-bottom: 1px solid @border-light-color;
+  }
+  .page-header{
+    border-bottom: 0;
+    margin: 0 0 10px 0;
+    padding: 0 10px 10px 10px;
+    border-bottom: 1px solid @border-light-color;
+    h3 {
+      color: @yellow-text-color;
+
+    }
+    .link {
+      color: @orange-link-color;
+      a {
+        padding: 0 10px 0 0;
+        color: @orange-link-color;
+        font-weight: bold;
+      }
+    }
+  }
+  .main {
+    .page-content {
+      margin-bottom: 15px;
+       a {
+        color: @orange-link-color;
+        &:hover {
+        }
+      }
+    }
+    .front-page {
+      padding: 0 5px 0 5px;
+      a {
+        color: @black-link-color;
+      }
+      h3 {
+        padding: 10px;
+      }
+      ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        li {
+
+        }
+      }
+    }
+    .product-categories {
+      h3 {
+        margin: 0 0 15px 0;
+        font-weight: bold;
+      }
+      ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        li {
+          h4 {
+            font-size: 19px;
+            font-weight: bold;
+            color: @black-link-color;
+            font-style: italic;
+            a {
+              text-decoration: none;
+            }
+          }
+          .thumbnail {
+            background: #eeeeee;
+          }
+          .caption {
+            p {
+              margin: 0;
+            }
+            .title {
+              font-weight: bold;
+            }
+            .description {
+              font-size: 12px;
+            }
+          }
+        }
+      }
+    }
+    .variations {
+      label {
+        font-size: 16px;
+        color: @black-link-color;
+        margin: 8px 0 0 0;
+      }
+    }
+    .single_variation, .single_price {
+      margin: 2px 0 0 0;
+    }
+  }
+  .widget_products {
+    margin: 5px 0 0 0;
+    border: 1px solid #e8e8e8;
+    .widget-title {
+      font-size: 16px;
+      font-weight: bold;
+      background: #e8e8e8;
+      padding: 3px;
+      font-style: italic;
+    }
+    .product_list_widget {
+      padding: 5px;
+      a {
+        color: #000;
+        &:hover {
+          text-decoration: none;
+        }
+      }
+      .wp-post-image {
+        float: left;
+        margin: 5px;
+      }
+    }
+  }
+  .widget_product_search {
+    margin: 5px 0 0 0;
+      .screen-reader-text {
+        display: none;
+      }
+    .search-form {
+      .form-control {
+        height: 26px;
+        border-radius: 0;
+        border: 0;
+        background-color: #e8e8e8;
+        color: #222;
+      }
+      .input-group-btn {
+        .btn {
+          padding: 3px;
+          border: 0;
+          border-radius: 0;
+          height: 26px;
+          width: 18px;
+        }
+        .btn-default {
+          background: url('../img/go.png') no-repeat #e8e8e8;
+          background-position: 25%;
+        }
+      }
+    }
+  }
+  .TestimonialRotatorWidget {
+    margin: 10px 0 10px 0;
+    .widget-title {
+      font-size: 16px;
+      font-weight: bold;
+      padding: 3px 0 3px 0;
+      font-style: italic;
+    }
+    .testimonial_rotator_slide_title {
+      font-size: 14px;
+      font-weight: bold;
+      padding: 3px 0 3px 0;
+      font-style: italic;
+    }
+    .testimonial_rotator_quote {
+      font-size: 12px;
+    }
+    .testimonial_rotator_author_info {
+      border: 0;
+      padding: 0;
+      font-size: 11px;
+      margin: 5px 0 10px 0;
+    }
+    .testimonial_rotator_prev, .testimonial_rotator_next {
+      top: 90%;
+    }
+  }
+}
+
+.woocommerce-page {
+
+  .woocommerce-message, .woocommerce-error, .woocommerce-info {
+    &:before{
+      height: 40px!important
+    }
+  }
+}
+
+.skiptotop {
+  text-align: right;
+  background: url('../img/skip.png') no-repeat 91% 15%;
+  padding: 0 5px 0 0;
+  font-size: 11px;
+  hr {
+    border: none;
+    padding: 0;
+    margin: 0;
+  }
+  > a {
+    color: @orange-link-color;
+    text-decoration: none;
+    &:hover {
+      color: @orange-link-color;
+      text-decoration: none;
+    }
+  }
+
+}
+
+.services-dark-menu {
+  background: @dark-blue;
+  height: 29px;
+  color: @dark-blue-light-text;
+  padding: 5px 0 0 20px;
+  ul {
+    margin: 0;
+    padding: 0;
+    li {
+      display: inline;
+      font-weight: bold;
+      color: @dark-blue-light-text;
+      margin: 0;
+      padding: 0;
+      a {
+        color: @dark-blue-light-text;
+        text-decoration: none;
+      }
+    }
+  }
+  .main {
+    background: url('../img/orange_ball.png') no-repeat;
+    height: 26px;
+    padding: 2px 0 2px 25px;
+    margin: 0 10px 0 10px;
+    background-position: left;
+  }
+  .spacer {
+    border-left: 1px dotted @dark-blue-light-text;
+  }
+  .service {
+    background: url('../img/orange_arrow.png') no-repeat;
+    padding: 2px 0 0 10px;
+    margin: 0 5px 0 5px;
+    background-position: left;
+  }
+  .active {
+    background: url('../img/orange_arrow_active.png') no-repeat;
+    padding: 2px 0 0 10px;
+    margin: 0 5px 0 5px;
+    background-position: left;
+    a {
+      color: @orange-link-color;
+    }
+  }
+}
+
+.services-dark-section {
+  background: @dark-blue;
+  color: @dark-blue-light-text;
+  padding-top: 15px;
+  .right-separator {
+    border-right: solid 2px @border-dark-color;
+  }
+  .single {
+    margin-bottom: 30px;
+    padding-left: 5px;
+  }
+  .single-text {
+    padding-left: 5px;
+  }
+  h3 {
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 21px;
+    margin: 0 0 5px 0;
+    color: @orange-link-color;
+    a {
+      font-size: 15px;
+      font-weight: bold;
+      line-height: 21px;
+      margin: 5px 0 5px 0;
+      color: @orange-link-color;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+
+  }
+  h4 {
+    font-size: 12px;
+    padding: 0 20px 0 0;
+    line-height: 14px;
+    margin: 0;
+    font-weight: normal;
+    a {
+      text-decoration: none;
+      color: @orange-link-color;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  }
+  p {
+    margin: 5px 0 0 0;
+    font-size: 11px;
+    line-height: 15px;
+    a {
+      color: @orange-link-color;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+
+/* ==========================================================================
+   Primary Content
+   ========================================================================== */
+
+.main { }
+
+/* Gallery Shortcode */
+.gallery-row { padding: 15px 0; }
+
+
+
+
+/* ==========================================================================
+   Sidebar
+   ========================================================================== */
+
+.sidebar {
+  margin: 10px 0 20px 0;
+  border-right: solid 2px @border-light-color;
+
+  .widget {
+    margin: 0 0 10px 0;
+    h3 {
+      font-size: 16px;
+      font-weight: bold;
+    }
+    a {
+      color: @orange-link-color;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+
+
+/* ==========================================================================
+   Posts
+   ========================================================================== */
+
+.hentry header { }
+.hentry time { }
+.hentry .byline { }
+.hentry .entry-content { }
+.hentry footer { }
+
+
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+
+.content-info {
+  .main-footer {
+    background-image: url('../img/footer_bg.png');
+    height: @footer-height;
+    .copyright {
+      margin: 0;
+      font-size: @footer-font-size;
+      padding: @footer-padding;
+    }
+  }
+}
+.bottom-bar {
+  height: 10px;
+  background: @dark-blue;
+}
+
+.nav-menu-footer {
+  > li {
+    float: left;
+    text-align: left;
+    margin: @nav-menu-li-margin;
+    display: inline-block;
+    font-size: @nav-menu-link-font-size;
+    font-weight: normal;
+    &.nav-menu-text {
+      padding: @nav-menu-link-padding;
+      font-weight: normal;
+    }
+    > a {
+      color: @nav-menu-link-color;
+      padding: @nav-menu-link-padding;
+      &:hover,
+      &:focus {
+        color: @nav-menu-link-color-hover;
+        background-color: transparent;
+      }
+    }
+    // Active state
+    &.active > a {
+      &,
+      &:hover,
+      &:focus {
+        color: @nav-menu-link-color-hover;
+        background-color: none;
+        display: inline-block;
+      }
+    }
+  }
+}
+
+/* ==========================================================================
+   WordPress Generated Classes
+   See: http://codex.wordpress.org/CSS#WordPress_Generated_Classes
+   ========================================================================== */
+
+.aligncenter { display: block; margin: 0 auto; }
+.alignleft { float: left; }
+.alignright { float: right; }
+figure.alignnone { margin-left: 0; margin-right: 0; }
+
+
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+
+@media (min-width: @screen-sm-min) { }
+
+@media (min-width: @screen-md-min) { }
+
+@media (min-width: @screen-lg-min) { }

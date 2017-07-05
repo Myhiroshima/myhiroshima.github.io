@@ -1,0 +1,4 @@
+Country code,state code,postcodes ,cities,rate,tax name,priority,compound,shipping,tax class
+China,,,,2,,1,,,
+India,,,,5,,2,,,
+United States,,,,7,,3,,,
